@@ -6,7 +6,7 @@ class LocationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0.8,
+      elevation: 0.4,
       color: const Color.fromARGB(255, 255, 255, 255),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
