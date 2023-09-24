@@ -24,15 +24,21 @@ class WelcomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: Colors.black54),
               ),
-              SizedBox(
-                width: double.maxFinite,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      shape: const StadiumBorder(),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 15.0)),
-                  child: const Text('Explore'),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: SizedBox(
+                  width: double.maxFinite,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        shape: const StadiumBorder(),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8.0, vertical: 15.0)),
+                    child: const Text('Explore'),
+                  ),
                 ),
               )
             ],
