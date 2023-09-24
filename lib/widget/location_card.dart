@@ -6,27 +6,41 @@ class LocationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Row(
-        children: [
-          Image.asset(
-            "assets/map.png",
-            width: 100,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Text(
-            "Your Location",
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(color: Theme.of(context).primaryColor),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text("United states")
-        ],
+      elevation: 0.8,
+      color: const Color.fromARGB(255, 255, 255, 255),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          children: [
+            Image.asset(
+              "assets/map.png",
+              width: 100,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Your Location",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge!
+                      .copyWith(color: Theme.of(context).primaryColor),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Bhuvneshwari Nagar, Bengaluru",
+                  style: Theme.of(context).textTheme.labelLarge,
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
