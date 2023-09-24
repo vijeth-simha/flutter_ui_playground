@@ -16,10 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter UI Playground',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          primarySwatch: Colors.blue,
           useMaterial3: true,
-          textTheme: GoogleFonts.mulishTextTheme()),
-      home: WelcomePage(),
+          textTheme: GoogleFonts.mulishTextTheme(
+            Theme.of(context).textTheme,
+          )),
+      home: const WelcomePage(),
     );
   }
 }
