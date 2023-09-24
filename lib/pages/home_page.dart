@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_playground/widget/custom_icon_button.dart';
+import 'package:flutter_ui_playground/widget/location_card.dart';
 import 'package:ionicons/ionicons.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,6 +30,24 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+      body: ListView(
+        padding: const EdgeInsets.all(14),
+        children: const [LocationCard()],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(Ionicons.home_outline), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Ionicons.bookmark_outline), label: "Bookmark"),
+            BottomNavigationBarItem(
+                icon: Icon(Ionicons.ticket_outline), label: "Ticket"),
+            BottomNavigationBarItem(
+                icon: Icon(Ionicons.person_outline), label: "Profile")
+          ]),
     );
   }
 }
