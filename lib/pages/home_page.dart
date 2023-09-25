@@ -43,6 +43,7 @@ class HomePage extends StatelessWidget {
             height: 10,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Reccomondation",
                   style: Theme.of(context).textTheme.headlineMedium),
