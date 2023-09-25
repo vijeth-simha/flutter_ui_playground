@@ -33,12 +33,22 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(14),
-        children: const [
-          LocationCard(),
-          SizedBox(
+        children: [
+          const LocationCard(),
+          const SizedBox(
+            height: 15,
+          ),
+          const TouristPlaces(),
+          const SizedBox(
             height: 10,
           ),
-          TouristPlaces()
+          Row(
+            children: [
+              Text("Reccomondation",
+                  style: Theme.of(context).textTheme.headlineMedium),
+              TextButton(onPressed: () {}, child: const Text("View all"))
+            ],
+          )
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
