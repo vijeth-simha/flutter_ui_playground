@@ -8,6 +8,7 @@ class RecommendedPlaces extends StatelessWidget {
     return SizedBox(
       height: 235,
       child: ListView.separated(
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return const SizedBox(
