@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_playground/widget/custom_icon_button.dart';
 import 'package:flutter_ui_playground/widget/location_card.dart';
+import 'package:flutter_ui_playground/widget/reccommended_places.dart';
 import 'package:flutter_ui_playground/widget/touist_places.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -49,7 +50,11 @@ class HomePage extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineMedium),
               TextButton(onPressed: () {}, child: const Text("View all"))
             ],
-          )
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const RecommendedPlaces(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
