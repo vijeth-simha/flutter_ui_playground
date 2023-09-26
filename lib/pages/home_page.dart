@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Reccomondation",
-                  style: Theme.of(context).textTheme.headlineMedium),
+                  style: Theme.of(context).textTheme.headlineSmall),
               TextButton(onPressed: () {}, child: const Text("View all"))
             ],
           ),

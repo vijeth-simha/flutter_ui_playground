@@ -21,6 +21,22 @@ class RecommendedPlaces extends StatelessWidget {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(12.0),
                   onTap: () {},
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12.0),
+                          child: Image.asset(
+                            "assets/places/place1.jpg",
+                            width: double.maxFinite,
+                            height: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
               ),
             );
