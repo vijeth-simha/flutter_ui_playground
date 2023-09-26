@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_playground/models/recommended_places_model.dart';
 
 class RecommendedPlaces extends StatelessWidget {
   const RecommendedPlaces({super.key});
@@ -28,7 +29,7 @@ class RecommendedPlaces extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(12.0),
                           child: Image.asset(
-                            "assets/places/place1.jpg",
+                            recommendedPlaces[index].image,
                             width: double.maxFinite,
                             height: 150,
                             fit: BoxFit.cover,
@@ -36,8 +37,8 @@ class RecommendedPlaces extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            const Text("Jayanagar",
-                                style: TextStyle(fontSize: 14)),
+                            Text(recommendedPlaces[index].location,
+                                style: const TextStyle(fontSize: 14)),
                             const Spacer(),
                             Icon(
                               Icons.star,
@@ -53,16 +54,18 @@ class RecommendedPlaces extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Row(
+                        Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
-                              size: 12,
+                              size: 14,
+                              color: Colors.blue,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
-                            Text("Jayanagar", style: TextStyle(fontSize: 14)),
+                            Text(recommendedPlaces[index].location,
+                                style: const TextStyle(fontSize: 14)),
                           ],
                         )
                       ],
@@ -77,7 +80,7 @@ class RecommendedPlaces extends StatelessWidget {
               padding: EdgeInsets.only(right: 10),
             );
           },
-          itemCount: 8),
+          itemCount: recommendedPlaces.length),
     );
   }
 }
