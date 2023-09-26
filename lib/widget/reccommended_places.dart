@@ -38,6 +38,7 @@ class RecommendedPlaces extends StatelessWidget {
                           children: [
                             const Text("Jayanagar",
                                 style: TextStyle(fontSize: 14)),
+                            const Spacer(),
                             Icon(
                               Icons.star,
                               size: 14,
@@ -46,7 +47,22 @@ class RecommendedPlaces extends StatelessWidget {
                             const Text(
                               "4.4",
                               style: TextStyle(fontSize: 12),
-                            )
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Row(
+                          children: [
+                            Icon(
+                              Icons.location_on,
+                              size: 12,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text("Jayanagar", style: TextStyle(fontSize: 14)),
                           ],
                         )
                       ],
