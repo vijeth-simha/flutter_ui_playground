@@ -33,6 +33,21 @@ class RecommendedPlaces extends StatelessWidget {
                             height: 150,
                             fit: BoxFit.cover,
                           ),
+                        ),
+                        Row(
+                          children: [
+                            const Text("Jayanagar",
+                                style: TextStyle(fontSize: 14)),
+                            Icon(
+                              Icons.star,
+                              size: 14,
+                              color: Colors.yellow.shade700,
+                            ),
+                            const Text(
+                              "4.4",
+                              style: TextStyle(fontSize: 12),
+                            )
+                          ],
                         )
                       ],
                     ),
