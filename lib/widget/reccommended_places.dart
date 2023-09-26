@@ -11,10 +11,17 @@ class RecommendedPlaces extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return const SizedBox(
+            return SizedBox(
               width: 220,
               child: Card(
-                child: Text("odc"),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0)),
+                color: Colors.white,
+                elevation: 0.4,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(12.0),
+                  onTap: () {},
+                ),
               ),
             );
           },
