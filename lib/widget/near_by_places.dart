@@ -15,7 +15,12 @@ class NearBuyPlaces extends StatelessWidget {
               child: InkWell(
                 child: Row(
                   children: [
-                    Image.asset("name"),
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: Image.asset(
+                          "name",
+                          width: 135,
+                        )),
                     const Column(
                       children: [Text("dscodsc")],
                     )
