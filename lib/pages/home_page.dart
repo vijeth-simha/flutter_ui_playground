@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_playground/widget/custom_icon_button.dart';
 import 'package:flutter_ui_playground/widget/location_card.dart';
-import 'package:flutter_ui_playground/widget/near_buy_places.dart';
+import 'package:flutter_ui_playground/widget/near_by_places.dart';
 import 'package:flutter_ui_playground/widget/reccommended_places.dart';
 import 'package:flutter_ui_playground/widget/touist_places.dart';
 import 'package:ionicons/ionicons.dart';
@@ -56,6 +56,17 @@ class HomePage extends StatelessWidget {
             height: 10,
           ),
           const RecommendedPlaces(),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Nearby places",
+                  style: Theme.of(context).textTheme.headlineSmall),
+              TextButton(onPressed: () {}, child: const Text("View all"))
+            ],
+          ),
           const SizedBox(
             height: 10,
           ),
