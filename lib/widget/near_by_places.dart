@@ -11,7 +11,11 @@ class NearBuyPlaces extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: SizedBox(
             height: 135,
+            width: double.maxFinite,
             child: Card(
+              elevation: 0.4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0)),
               child: InkWell(
                 child: Row(
                   children: [
@@ -20,7 +24,11 @@ class NearBuyPlaces extends StatelessWidget {
                         child: Image.asset(
                           "name",
                           width: 135,
+                          height: double.maxFinite,
                         )),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     const Column(
                       children: [Text("dscodsc")],
                     )
