@@ -30,7 +30,15 @@ class NearBuyPlaces extends StatelessWidget {
                       width: 10,
                     ),
                     const Column(
-                      children: [Text("dscodsc")],
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "dscodsc",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        Text("dscodsc"),
+                      ],
                     )
                   ],
                 ),
