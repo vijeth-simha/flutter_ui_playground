@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Nearby places",
+              Text("Nearby from you",
                   style: Theme.of(context).textTheme.headlineSmall),
               TextButton(onPressed: () {}, child: const Text("View all"))
             ],
