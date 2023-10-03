@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_playground/models/nearby_places_model.dart';
 
 class NearBuyPlaces extends StatelessWidget {
   const NearBuyPlaces({super.key});
@@ -22,7 +23,7 @@ class NearBuyPlaces extends StatelessWidget {
                     ClipRRect(
                         borderRadius: BorderRadius.circular(12.0),
                         child: Image.asset(
-                          "name",
+                          nearbyPlaces[index].image,
                           width: 135,
                           height: double.maxFinite,
                         )),
