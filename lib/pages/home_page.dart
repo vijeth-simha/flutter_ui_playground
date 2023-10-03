@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const NearBuyPlaces()
+          const NearBuyPlaces(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -27,7 +27,19 @@ class Distance extends StatelessWidget {
               color: index.isOdd ? Colors.transparent : Colors.black54,
             ),
           );
-        })
+        }),
+        const SizedBox(
+          width: 3,
+        ),
+        const Icon(
+          Ionicons.locate_outline,
+          size: 14,
+          color: Colors.blue,
+        ),
+        const Text(
+          "kumasi",
+          style: TextStyle(color: Colors.black54),
+        ),
       ],
     );
   }
