@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_playground/models/nearby_places_model.dart';
+import 'package:flutter_ui_playground/widget/distance.dart';
 
 class NearBuyPlaces extends StatelessWidget {
   const NearBuyPlaces({super.key});
@@ -34,11 +35,15 @@ class NearBuyPlaces extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "dscodsc",
+                          "Sea of peace",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
-                        Text("dscodsc"),
+                        Text("Portic team"),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Distance()
                       ],
                     )
                   ],
