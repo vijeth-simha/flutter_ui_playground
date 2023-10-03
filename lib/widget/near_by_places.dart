@@ -27,24 +27,27 @@ class NearBuyPlaces extends StatelessWidget {
                           nearbyPlaces[index].image,
                           width: 135,
                           height: double.maxFinite,
+                          fit: BoxFit.cover,
                         )),
                     const SizedBox(
                       width: 10,
                     ),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Sea of peace",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
-                        Text("Portic team"),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Distance()
-                      ],
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Sea of peace",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          Text("Portic team"),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Distance()
+                        ],
+                      ),
                     )
                   ],
                 ),
