@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class AddContactPage extends StatelessWidget {
   final nameController = TextEditingController();
+  final phoneController = TextEditingController();
+  final emailController = TextEditingController();
   AddContactPage({super.key});
 
   @override
@@ -17,6 +19,7 @@ class AddContactPage extends StatelessWidget {
               child: Column(
             children: [
               TextFormField(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: nameController,
                 textInputAction: TextInputAction.next,
                 validator: (value) {
@@ -34,16 +37,18 @@ class AddContactPage extends StatelessWidget {
                 height: 20,
               ),
               TextFormField(
-                controller: nameController,
+                keyboardType: TextInputType.phone,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                controller: phoneController,
                 textInputAction: TextInputAction.next,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "Please enter a name";
+                    return "Please enter a phone";
                   }
                   return null;
                 },
                 decoration: const InputDecoration(
-                  hintText: "Name",
+                  hintText: "Phone",
                   // contentPadding: inputp,
                 ),
               ),
@@ -51,21 +56,23 @@ class AddContactPage extends StatelessWidget {
                 height: 20,
               ),
               TextFormField(
-                controller: nameController,
+                keyboardType: TextInputType.emailAddress,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                controller: emailController,
                 textInputAction: TextInputAction.next,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "Please enter a name";
+                    return "Please enter a email";
                   }
                   return null;
                 },
                 decoration: const InputDecoration(
-                  hintText: "Name",
+                  hintText: "Email",
                   // contentPadding: inputp,
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
             ],
           ))
