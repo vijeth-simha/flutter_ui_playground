@@ -1,8 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_playground/pages/welcome_page.dart';
+import 'package:flutter_ui_playground/firebase_options.dart';
+import 'package:flutter_ui_playground/pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -21,7 +27,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.mulishTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: const WelcomePage(),
+      home: const HomePage(),
     );
   }
 }

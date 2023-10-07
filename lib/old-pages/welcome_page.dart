@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_playground/pages/home_page.dart';
+import 'package:flutter_ui_playground/old-pages/home_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
